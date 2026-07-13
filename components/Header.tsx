@@ -4,7 +4,7 @@ import { site } from "@/app/site-config";
 
 export default function Header() {
   return (
-   <header className="sticky top-0 z-50 bg-red text-paper border-b-2 border-hazard h-20">
+   <header className="sticky top-0 z-50 bg-hazard text-paper border-b-2 border-hazard h-20">
 <div className="h-full grid md:grid-cols-3 grid-cols-2 items-center px-5">
 
         {/* Logo */}
