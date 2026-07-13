@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #16181c;
+  --color-steel: #2e3238;
+  --color-paper: #efebe2;
+  --color-paper-dim: #e4ded0;
+  --color-hazard: #8c0b0b;
+  --color-signal: #8c0b0b;
+  --color-ash: #6b6f76;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-steel: var(--color-steel);
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-hazard: var(--color-hazard);
+  --color-signal: var(--color-signal);
+  --color-ash: var(--color-ash);
+  --font-display: var(--font-oswald);
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* perforated divider, like a tear-off ticket stub */
+.perforation {
+  position: relative;
+  border-top: 2px dashed var(--color-ash);
+  opacity: 0.5;
+}
+.perforation::before,
+.perforation::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: var(--color-paper);
+}
+.perforation::before {
+  left: -10px;
+}
+.perforation::after {
+  right: -10px;
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 3px solid var(--color-hazard);
+  outline-offset: 2px;
+}
