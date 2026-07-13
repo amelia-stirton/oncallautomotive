@@ -22,7 +22,7 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm text-paper/80">
+        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --color-hazard/80">
           <a
             href="#services"
             className="hover:text-hazard transition-colors focus-ring rounded"
