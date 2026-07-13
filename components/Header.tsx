@@ -4,7 +4,7 @@ import { site } from "@/app/site-config";
 
 export default function Header() {
   return (
-   <header className="sticky top-0 z-50 bg-ink text-paper border-b-2 border-hazard h-20">
+   <header className="sticky top-0 z-50 bg-red text-paper border-b-2 border-hazard h-20">
 <div className="h-full grid md:grid-cols-3 grid-cols-2 items-center px-5">
 
         {/* Logo */}
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --color-hazard/80">
+        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --text-paper/80">
           <a
             href="#services"
             className="hover:text-hazard transition-colors focus-ring rounded"
