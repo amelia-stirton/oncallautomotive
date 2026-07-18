@@ -26,7 +26,7 @@ export default function Hero() {
               href="#quote"
               className="inline-flex items-center justify-center border-2 border-ink text-ink font-display uppercase tracking-wide font-semibold px-6 py-3 rounded-sm hover:bg-ink hover:text-paper transition focus-ring"
             >
-Inquire now            </a>
+Enquire now            </a>
           </div>
         </div>
 

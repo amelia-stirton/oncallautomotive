@@ -34,7 +34,7 @@ export default function Header() {
             href="#quote"
             className="hover:text-hazard transition-colors focus-ring rounded"
           >
-            Get a Quote
+            Enquire
           </a>
 
           <a
