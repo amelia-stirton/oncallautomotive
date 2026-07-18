@@ -75,48 +75,63 @@ try {
           onSubmit={handleSubmit}
           className="bg-paper border-2 border-ink rounded-md p-6 sm:p-8 space-y-5"
         >
-          <Field label="Name" name="name" required autoComplete="name" />
-          <div className="grid sm:grid-cols-2 gap-5">
-            <Field
-              label="Phone"
-              name="phone"
-              type="tel"
-              required
-              autoComplete="tel"
-            />
-            <Field
-              label="Email"
-              name="email"
-              type="email"
-              required
-              autoComplete="email"
-            />
-          </div>
-          <Field label="Suburb / location" name="location" required />
-          <Field
-            label="Vehicle (make, model, year)"
-            name="vehicle"
-            required
-          />
+       <Field label="Name" name="name" required autoComplete="name" maxLength={80} />
+<div className="grid sm:grid-cols-2 gap-5">
+  <Field
+    label="Phone"
+    name="phone"
+    type="tel"
+    required
+    autoComplete="tel"
+    maxLength={20}
+  />
+  <Field
+    label="Email"
+    name="email"
+    type="email"
+    required
+    autoComplete="email"
+    maxLength={100}
+  />
+</div>
+<Field label="Suburb / location" name="location" required maxLength={80} />
+<Field
+  label="Vehicle (make, model, year)"
+  name="vehicle"
+  required
+  maxLength={100}
+/>
 
-           <Field label="Kilometres (if you're unsure, leave this out)" name="kilometres" required />
+<Field
+  label="Kilometres (if you're unsure, leave this out)"
+  name="kilometres"
+  required
+  maxLength={10}
+/>
 
-           <Field label="Registration number" name="registration" required />
-          <div>
-            <label
-              htmlFor="details"
-              className="block font-mono text-xs uppercase tracking-widest text-ash mb-1"
-            >
-              How can we help?
-            </label>
-            <textarea
-              id="details"
-              name="details"
-              required
-              rows={4}
-              className="w-full border-2 border-ink/30 rounded-sm px-3 py-2 bg-paper focus:border-hazard focus-ring resize-y"
-            />
-          </div>
+<Field
+  label="Registration number"
+  name="registration"
+  required
+  maxLength={10}
+/>
+
+<div>
+  <label
+    htmlFor="details"
+    className="block font-mono text-xs uppercase tracking-widest text-ash mb-1"
+  >
+    How can we help?
+  </label>
+  <textarea
+    id="details"
+    name="details"
+    required
+    rows={4}
+    maxLength={1000}
+    className="w-full border-2 border-ink/30 rounded-sm px-3 py-2 bg-paper focus:border-hazard focus-ring resize-y"
+  />
+</div>
 
           <button
             type="submit"
@@ -147,12 +162,14 @@ function Field({
   type = "text",
   required,
   autoComplete,
+  maxLength,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   autoComplete?: string;
+  maxLength?: number;
 }) {
   return (
     <div>
@@ -168,6 +185,7 @@ function Field({
         type={type}
         required={required}
         autoComplete={autoComplete}
+        maxLength={maxLength}
         className="w-full border-2 border-ink/30 rounded-sm px-3 py-2 bg-paper focus:border-hazard focus-ring"
       />
     </div>
