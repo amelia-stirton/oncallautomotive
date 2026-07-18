@@ -4,12 +4,12 @@
 import { useEffect, useRef, useState } from "react";
 
 const services = [
-  { code: "1", name: "Logbook Servicing", desc: "Description" },
-  { code: "2", name: "Pre-purchase Inspections", desc: "Description" },
-  { code: "3", name: "Fault Diagnostics", desc: "Description" },
-  { code: "4", name: "Batteries", desc: "Description" },
-  { code: "5", name: "Mechanical and Cooling System Repairs", desc: "Description" },
-  { code: "6", name: "Breakdown assistance", desc: "Description" },
+  { name: "Logbook Servicing", desc: "Description" },
+  { name: "Pre-purchase Inspections", desc: "Description" },
+  { name: "Fault Diagnostics", desc: "Description" },
+  { name: "Batteries", desc: "Description" },
+  { name: "Mechanical Repairs", desc: "Description" },
+  { name: "Breakdown assistance", desc: "Description" },
 
 ];
 
@@ -52,9 +52,7 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
         transform: inView ? "translateY(0)" : "translateY(24px)",
       }}
     >
-      <span className="font-mono text-hazard text-sm tracking-widest">
-        {s.code}
-      </span>
+    
       <h3 className="font-display uppercase font-semibold text-xl leading-tight">
         {s.name}
       </h3>
@@ -79,13 +77,12 @@ export default function Services() {
 
         <div className="grid sm:grid-cols-2 gap-px bg-paper/10">
           {services.map((s, index) => (
-            <ServiceCard key={s.code} s={s} index={index} />
+            <ServiceCard key={index} s={s} index={index} />
           ))}
         </div>
 
         <p className="mt-8 text-paper/60 text-sm">
-          Don&rsquo;t see your issue listed? Give Chris a call &mdash; if it&rsquo;s
-          on four wheels, he's probably fixed it.
+          Don&rsquo;t see your issue listed? Give Chris a call 
         </p>
       </div>
     </section>

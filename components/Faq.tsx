@@ -1,15 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
+import Link from "next/link";
 
-const faqs = [
-  {
-    q: "Do you charge a call-out fee?",
-    a: "Just a flat $70 callout - simple as that. No surprises, no hidden fees.",
-  },
+const faqs: { q: string; a: ReactNode }[] = [
+  
   {
     q: "What areas do you cover?",
-    a: "We service the Sydney metro area within a 40km radius. Not sure if you're in range? Send your suburb through the quote form and we'll confirm.",
+    a: (
+      <>
+        We service St George, Sutherland Shire, Eastern Suburbs, North Sydney
+        and Western Sydney. Not sure if we cover your suburb? Check our{" "}
+        <Link href="/#service-areas" className="underline text-signal">
+          full list of service areas
+        </Link>{" "}
+        or get in touch and we'll do our best to help.
+      </>
+    ),
   },
   {
     q: "Can you fix my car in a car park or on the street?",

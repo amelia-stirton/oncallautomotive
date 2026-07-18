@@ -63,15 +63,12 @@ try {
   return (
     <section id="quote" className="bg-paper-dim">
       <div className="mx-auto max-w-2xl px-5 sm:px-8 py-16 sm:py-24">
-        <p className="font-mono text-signal text-sm uppercase tracking-widest mb-3">
-          Work Order &mdash; New Request
-        </p>
+       
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-2">
-          Request a Quote
+          Enquire Now
         </h2>
         <p className="text-ink/70 mb-8">
-          Tell us what&rsquo;s going on and where you&rsquo;re parked. We&rsquo;ll
-          reply as soon as possible.
+          Need a service, repair, or inspection? Tell us a little about your vehicle and we'll get back to you shortly.
         </p>
 
         <form
@@ -102,7 +99,7 @@ try {
             required
           />
 
-           <Field label="Current kilometres on vehicle" name="kilometres" required />
+           <Field label="Kilometres (if you're unsure, leave this out)" name="kilometres" required />
 
            <Field label="Registration number" name="registration" required />
           <div>
@@ -110,7 +107,7 @@ try {
               htmlFor="details"
               className="block font-mono text-xs uppercase tracking-widest text-ash mb-1"
             >
-              What&rsquo;s the issue?
+              How can we help?
             </label>
             <textarea
               id="details"
