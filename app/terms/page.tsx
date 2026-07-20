@@ -25,7 +25,7 @@ export default function TermsPage() {
           </h1>
           <p className="text-ink/60 text-sm mb-8">
             {site.businessName} &mdash; Mobile Mechanic, Hurstville NSW.
-            Licensed Motor Vehicle Repairer (MVRL)
+            Licensed Motor Vehicle Repairer (MVRL #64070)
           </p>
 
           <div className="prose-like space-y-6 text-ink/80 leading-relaxed">
