@@ -12,7 +12,7 @@ export default function Footer() {
             alt={`${site.businessName} logo`}
             width={220}
             height={64}
-            className="h-10 w-auto mb-3"
+            className="h-15 w-auto mb-3"
           />
           <p className="text-paper/60 text-sm">{site.tagline}</p>
         </div>
@@ -43,17 +43,25 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="font-mono text-sm space-y-2 sm:text-right">
+       <div className="font-mono text-sm space-y-2 sm:text-right">
           <p className="uppercase tracking-widest text-paper/40 text-xs mb-2">
             Hours
           </p>
           <p className="text-paper/60">{site.hours}</p>
-          <Link
-            href="/terms"
-            className="inline-block underline text-paper/60 hover:text-hazard transition-colors focus-ring rounded mt-2"
-          >
-            Terms &amp; Conditions
-          </Link>
+          <div className="flex flex-col sm:items-end gap-1 mt-2">
+            <Link
+              href="/terms"
+              className="inline-block underline text-paper/60 hover:text-hazard transition-colors focus-ring rounded"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <Link
+              href="/privacy"
+              className="inline-block underline text-paper/60 hover:text-hazard transition-colors focus-ring rounded"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
       <div className="border-t border-paper/10 py-4 px-5 sm:px-8 text-center text-paper/40 text-xs font-mono space-y-1">

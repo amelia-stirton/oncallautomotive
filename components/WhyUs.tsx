@@ -1,19 +1,22 @@
 const reasons = [
-  {
+
+    {
     title: "We come to you",
-    desc: "Home, office, or roadside. No towing, no time off work.",
+    desc: "Home, office or roadside. No towing, no time off work.",
   },
+
   {
     title: "Upfront pricing",
-    desc: "You get a quote before we start. No surprise call-out fees.",
+    desc: "You get a quote before we start work on your vehicle.",
   },
+
   {
     title: "Fully equipped van",
-    desc: "Diagnostic tools and common parts carried on every job.",
+    desc: "The latest diagnostic equipment, along with the tools to get your car back on the road.",
   },
   {
     title: "Qualified & insured",
-    desc: "Licensed mechanic, fully insured for work at your property.",
+    desc: "Licensed and insured mechanic, ready to fix your car at your property, workplace, or roadside",
   },
 ];
 

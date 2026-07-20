@@ -4,12 +4,12 @@
 import { useEffect, useRef, useState } from "react";
 
 const services = [
-  { name: "Logbook Servicing", desc: "Description" },
-  { name: "Pre-purchase Inspections", desc: "Description" },
-  { name: "Fault Diagnostics", desc: "Description" },
-  { name: "Batteries", desc: "Description" },
-  { name: "Mechanical Repairs", desc: "Description" },
-  { name: "Breakdown assistance", desc: "Description" },
+  { name: "Logbook Servicing", desc: "Scheduled servicing that meets manufacturer requirements, so your new car warranty stays valid." },
+  { name: "Repairs", desc: "We cover it all - brakes, suspension, power steering, cooling systems, and electrical repairs, including alternator and starter motor replacements, and much more." },
+  { name: "Fault Diagnostics", desc: "Engine light on, or your car doesn’t sound or drive like it usually does? We have the latest diagnostic equipment to get to the bottom of your issue." },
+  { name: "Batteries", desc: "We offer 24/7 battery roadside assistance - we’ll come to you, test your battery, and replace it on the spot." },
+  { name: "Breakdown assistance", desc: "Car not starting? Flat tyre? If you’re stuck on the side of the road, 24/7 roadside assistance is available to get you back on the road." },
+  { name: "Pre-purchase Inspections", desc: "Buying a used car? I'll check it over before you hand over your money. You'll get a verbal and written report, plus a full diagnostic scan." }
 
 ];
 

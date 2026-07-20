@@ -82,9 +82,7 @@ export default function ServiceAreas() {
   return (
     <section id="service-areas" className="bg-paper-dim">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
-        <p className="font-mono text-signal text-sm uppercase tracking-widest mb-3">
-          Where we work
-        </p>
+       
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-4">
           Mobile Mechanic Sydney &mdash; Areas We Service
         </h2>

@@ -43,10 +43,10 @@ try {
       <section id="quote" className="bg-paper-dim">
         <div className="mx-auto max-w-2xl px-5 sm:px-8 py-16 sm:py-24 text-center">
           <p className="font-mono text-hazard text-sm uppercase tracking-widest mb-3">
-            Ticket lodged
+            Thank you
           </p>
           <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-4">
-            Got it &mdash; we&rsquo;ll be in touch shortly
+            we&rsquo;ll be in touch shortly
           </h2>
           <p className="text-ink/70">
             Need it sorted faster? Call us directly on{" "}
