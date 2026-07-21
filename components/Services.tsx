@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -42,22 +41,25 @@ function useInView() {
 function ServiceCard({ s, index }: { s: Service; index: number }) {
   const [ref, inView] = useInView();
 
+  const isLeftColumn = index % 2 === 0;
+
   return (
     <div
       ref={ref}
-      className="bg-ink p-6 flex flex-col gap-3 transition-all duration-700 ease-out"
+      className={`p-6 flex flex-col gap-3 transition-all duration-700 ease-out border-b border-hazard/40 last:border-b-0 sm:[&:nth-last-child(2)]:border-b-0 ${
+        isLeftColumn ? "sm:border-r" : ""
+      }`}
       style={{
         transitionDelay: inView ? `${(index % 2) * 120}ms` : "0ms",
         opacity: inView ? 1 : 0,
         transform: inView ? "translateY(0)" : "translateY(24px)",
       }}
     >
-    
       <h3 className="font-display uppercase font-semibold text-xl leading-tight">
         {s.name}
       </h3>
       <p
-        className="text-paper/70 text-sm"
+        className="text-ink/70 text-sm"
         dangerouslySetInnerHTML={{ __html: s.desc }}
       />
     </div>
@@ -66,22 +68,21 @@ function ServiceCard({ s, index }: { s: Service; index: number }) {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-ink text-paper">
+    <section id="services" className="bg-paper-dim text-ink">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
         <div className="flex items-baseline justify-between flex-wrap gap-4 mb-10">
           <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl">
             Services Offered
           </h2>
-         
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-px bg-paper/10">
+        <div className="grid sm:grid-cols-2">
           {services.map((s, index) => (
             <ServiceCard key={index} s={s} index={index} />
           ))}
         </div>
 
-        <p className="mt-8 text-paper/60 text-sm">
+        <p className="mt-8 text-ink/60 text-sm">
           Don&rsquo;t see your issue listed? Give Chris a call 
         </p>
       </div>

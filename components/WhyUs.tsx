@@ -22,14 +22,14 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section className="bg-paper">
+    <section className="bg-paper-dim">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-10">
           Why Choose Us
         </h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {reasons.map((r) => (
-            <div key={r.title} className="border-t-4 border-hazard pt-4">
+            <div key={r.title} className="border-t-2 border-hazard pt-4">
               <h3 className="font-display uppercase font-semibold text-lg mb-2">
                 {r.title}
               </h3>

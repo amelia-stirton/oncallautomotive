@@ -4,25 +4,25 @@ import { site } from "@/app/site-config";
 
 export default function Header() {
   return (
-   <header className="sticky top-0 z-50 bg-ink text-paper border-b-2 border-hazard h-20">
+   <header className="sticky top-0 z-50 bg-paper text-ink border-b-2 border-hazard h-20">
 <div className="h-full grid md:grid-cols-3 grid-cols-2 items-center px-5">
 
         {/* Logo */}
         <div className="flex items-center">
           <Link href="#top" className="rounded shrink-0">
             <Image
-              src="/oncallfinallogowhite.png"
+              src="/logo.png"
               alt={`${site.businessName} logo`}
-              width={200}
-              height={77}
+              width={600}
+              height={400}
               priority
-              className="h-14 sm:h-20 md:h-20 lg:h-20 w-auto object-contain"
+              className="h-14 sm:h-20md:h-20 lg:h-20 w-auto object-contain"
             />
           </Link>
         </div>
 
         {/* Navigation */}
-        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --text-paper/80">
+        <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --text-ink/80">
           <a
             href="#services"
             className="hover:text-hazard transition-colors focus-ring rounded"

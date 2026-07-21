@@ -80,11 +80,15 @@ const serviceAreas = [
 
 export default function ServiceAreas() {
   return (
-    <section id="service-areas" className="bg-paper-dim">
+    <section id="service-areas" className="bg-paper">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-24">
        
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-4">
-          Mobile Mechanic Sydney &mdash; Areas We Service
+          Mobile Mechanic Sydney 
+        </h2>
+
+         <h2 className="text-hazard font-display uppercase font-semibold text-3xl sm:text-4xl mb-4">
+          &mdash; Areas We Service
         </h2>
         <p className="text-ink/70 max-w-2xl mb-8">
           We proudly service the St George, Sutherland, Eastern Suburbs, North Sydney and Western Sydney regions. If you're located outside these areas, please don't hesitate to get in touch. We'll do our best to accommodate your location whenever possible.
@@ -93,11 +97,11 @@ export default function ServiceAreas() {
           {serviceAreas.map((area) => (
             <details
               key={area.label}
-              className="group border-2 border-ink/15 rounded-sm px-4 py-3 open:pb-4"
+              className="group border-2 border-hazard/60 rounded-sm px-4 py-3 open:pb-4"
             >
               <summary className="font-mono text-sm uppercase tracking-widest cursor-pointer list-none flex items-center justify-between">
                 {area.label}
-                <span className="ml-3 text-ink/40 transition-transform group-open:rotate-180">
+                <span className="ml-3 text-hazard/60 transition-transform group-open:rotate-180">
                   ▾
                 </span>
               </summary>

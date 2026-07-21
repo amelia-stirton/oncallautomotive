@@ -61,7 +61,7 @@ try {
   }
 
   return (
-    <section id="quote" className="bg-paper-dim">
+    <section id="quote" className="bg-paper">
       <div className="mx-auto max-w-2xl px-5 sm:px-8 py-16 sm:py-24">
        
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-2">
@@ -73,7 +73,7 @@ try {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-paper border-2 border-ink rounded-md p-6 sm:p-8 space-y-5"
+          className="bg-paper-dim border-2 border-ink rounded-md p-6 sm:p-8 space-y-5"
         >
        <Field label="Name" name="name" required autoComplete="name" maxLength={80} />
 <div className="grid sm:grid-cols-2 gap-5">

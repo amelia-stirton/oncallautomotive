@@ -4,21 +4,21 @@ import { site } from "@/app/site-config";
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-paper mt-auto">
+    <footer className="bg-paper text-ink mt-auto">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-12 grid sm:grid-cols-3 gap-8">
         <div>
           <Image
-            src="/logo-on-call-automotive.png"
+            src="/logo.png"
             alt={`${site.businessName} logo`}
             width={220}
             height={64}
             className="h-15 w-auto mb-3"
           />
-          <p className="text-paper/60 text-sm">{site.tagline}</p>
+          <p className="text-ink/60 text-sm">{site.tagline}</p>
         </div>
 
         <div className="font-mono text-sm space-y-2">
-          <p className="uppercase tracking-widest text-paper/40 text-xs mb-2">
+          <p className="uppercase tracking-widest text-ink/40 text-xs mb-2">
             Contact
           </p>
           <a
@@ -44,27 +44,27 @@ export default function Footer() {
         </div>
 
        <div className="font-mono text-sm space-y-2 sm:text-right">
-          <p className="uppercase tracking-widest text-paper/40 text-xs mb-2">
+          <p className="uppercase tracking-widest text-ink/40 text-xs mb-2">
             Hours
           </p>
-          <p className="text-paper/60">{site.hours}</p>
+          <p className="text-ink/60">{site.hours}</p>
           <div className="flex flex-col sm:items-end gap-1 mt-2">
             <Link
               href="/terms"
-              className="inline-block underline text-paper/60 hover:text-hazard transition-colors focus-ring rounded"
+              className="inline-block underline text-ink/60 hover:text-hazard transition-colors focus-ring rounded"
             >
               Terms &amp; Conditions
             </Link>
             <Link
               href="/privacy"
-              className="inline-block underline text-paper/60 hover:text-hazard transition-colors focus-ring rounded"
+              className="inline-block underline text-ink/60 hover:text-hazard transition-colors focus-ring rounded"
             >
               Privacy Policy
             </Link>
           </div>
         </div>
       </div>
-      <div className="border-t border-paper/10 py-4 px-5 sm:px-8 text-center text-paper/40 text-xs font-mono space-y-1">
+      <div className="border-t border-ink/10 py-4 px-5 sm:px-8 text-center text-ink/40 text-xs font-mono space-y-1">
         <p>
           Mobile mechanic servicing {site.suburbs.slice(0, -1).join(", ")} and{" "}
           {site.suburbs[site.suburbs.length - 1]}.

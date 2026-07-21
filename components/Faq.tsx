@@ -36,7 +36,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-paper">
+    <section id="faq" className="bg-paper-dim">
       <div className="mx-auto max-w-3xl px-5 sm:px-8 py-16 sm:py-24">
         <h2 className="font-display uppercase font-semibold text-3xl sm:text-4xl mb-10">
           Frequently Asked Questions
