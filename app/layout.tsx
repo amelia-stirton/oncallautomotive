@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oswald, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "./site-config";
+import { Analytics } from '@vercel/analytics/next';
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -104,6 +105,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
