@@ -73,3 +73,13 @@ body {
   outline: 3px solid var(--color-hazard);
   outline-offset: 2px;
 }
+
+
+/* Taller phones (e.g. iPhone 14 Pro Max, 15 Pro Max, 16 Pro Max) */
+@media (max-width: 639px) and (min-height: 800px) {
+  .hero-content {
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+}
