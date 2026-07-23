@@ -14,6 +14,7 @@ const MAX_LENGTHS = {
 };
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const RECAPTCHA_SCORE_THRESHOLD = 0.5;
 
 function escapeHtml(input: string): string {
   return input
@@ -22,6 +23,31 @@ function escapeHtml(input: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  try {
+    const res = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          secret: process.env.RECAPTCHA_SECRET_KEY as string,
+          response: token,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    console.log("reCAPTCHA verify response:", data);
+
+    return data.success === true && data.score >= RECAPTCHA_SCORE_THRESHOLD;
+  } catch (error) {
+    console.error("reCAPTCHA verification failed:", error);
+    return false;
+  }
 }
 
 export async function POST(request: Request) {
@@ -37,7 +63,24 @@ export async function POST(request: Request) {
       kilometres,
       registration,
       details,
+      recaptchaToken,
     } = body;
+
+    // reCAPTCHA check
+    if (typeof recaptchaToken !== "string" || recaptchaToken.length === 0) {
+      return Response.json(
+        { success: false, error: "Missing reCAPTCHA token" },
+        { status: 400 }
+      );
+    }
+
+    const isHuman = await verifyRecaptcha(recaptchaToken);
+    if (!isHuman) {
+      return Response.json(
+        { success: false, error: "reCAPTCHA verification failed" },
+        { status: 400 }
+      );
+    }
 
     const fields = {
       name,

@@ -5,6 +5,15 @@ import { site } from "@/app/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void;
+      execute: (siteKey: string, options: { action: string }) => Promise<string>;
+    };
+  }
+}
+
 export default function QuoteForm() {
   const [status, setStatus] = useState<Status>("idle");
 
@@ -12,20 +21,34 @@ export default function QuoteForm() {
     e.preventDefault();
     setStatus("submitting");
 
-   const form = e.currentTarget;
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
 
-const formData = new FormData(form);
+    try {
+      // Get reCAPTCHA token before submitting
+      const token = await new Promise<string>((resolve, reject) => {
+        if (!window.grecaptcha) {
+          reject(new Error("reCAPTCHA not loaded"));
+          return;
+        }
+        window.grecaptcha.ready(() => {
+          window.grecaptcha
+            .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string, {
+              action: "submit",
+            })
+            .then(resolve)
+            .catch(reject);
+        });
+      });
 
-const data = Object.fromEntries(formData.entries());
-
-try {
-  const res = await fetch("/api/quote", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...data, recaptchaToken: token }),
+      });
 
       if (res.ok) {
         setStatus("success");
