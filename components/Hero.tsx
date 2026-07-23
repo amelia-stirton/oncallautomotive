@@ -16,7 +16,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Desktop: two photos side by side as the full-bleed background */}
+      {/* Desktop: two photos side by side as the background */}
       <div className="hidden md:flex absolute inset-0">
         <div className="relative flex-[1.4]">
           <Image
@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
         <div className="relative flex-1">
           <Image
-            src="/herodesktop.png"
+            src="/heroimage2.png"
             alt="Tools in the van"
             fill
             className="object-cover object-center"
