@@ -10,7 +10,7 @@ export const site = {
   instagramHandle: "@oncallautomotive.au",
   instagramUrl: "https://instagram.com/oncallautomotive.au",
   facebookUrl: "https://www.facebook.com/profile.php?id=61591802703499",
-  serviceArea: "St George and Sutherland Shire",
+  serviceArea: "Sydney",
   // Used in the service-area section and footer for local SEO relevance.
   suburbs: [
     "St George",
@@ -20,5 +20,5 @@ export const site = {
     "Western Sydney",
   ],
   hours: "24/7",
-  siteUrl: "https://www.oncallautomotive.com.au",
+  siteUrl: "https://www.oncallautomotive.au",
 };

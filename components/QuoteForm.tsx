@@ -173,7 +173,46 @@ export default function QuoteForm() {
               instead.
             </p>
           )}
+
+{status === "error" && (
+            <p className="text-signal text-sm">
+              Something went wrong sending that. Please call{" "}
+              <a href={site.phoneHref} className="underline">
+                {site.phoneDisplay}
+              </a>{" "}
+              instead.
+            </p>
+          )}
+
+          <p className="text-xs text-ink/50">
+            This site is protected by reCAPTCHA and the Google{" "}
+            
+            <a  href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            
+             <a href="https://policies.google.com/terms"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              Terms of Service
+            </a>{" "}
+            apply.
+          </p>
         </form>
+
+
+
+
+
+
+          
       </div>
     </section>
   );
