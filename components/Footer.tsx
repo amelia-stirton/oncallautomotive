@@ -41,6 +41,15 @@ export default function Footer() {
           >
             {site.instagramHandle} on Instagram
           </a>
+
+          <a
+            href={site.facebookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block hover:text-hazard transition-colors focus-ring rounded"
+          >
+            @oncallautomotive on Facebook
+          </a>
         </div>
 
        <div className="font-mono text-sm space-y-2 sm:text-right">

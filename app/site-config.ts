@@ -9,6 +9,7 @@ export const site = {
   email: "info@oncallautomotive.com.au",
   instagramHandle: "@oncallautomotive.au",
   instagramUrl: "https://instagram.com/oncallautomotive.au",
+  facebookUrl: "https://www.facebook.com/profile.php?id=61591802703499",
   serviceArea: "St George and Sutherland Shire",
   // Used in the service-area section and footer for local SEO relevance.
   suburbs: [
