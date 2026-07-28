@@ -1,5 +1,6 @@
 "use client";
 
+import { site } from "@/app/site-config";
 import { useEffect, useRef, useState } from "react";
 
 const services = [
@@ -83,7 +84,11 @@ export default function Services() {
         </div>
 
         <p className="mt-8 text-ink/60 text-sm">
-          Don&rsquo;t see your issue listed? Give Chris a call 
+          Don&rsquo;t see your issue listed? Give Chris a call at{" "}
+          <a href={site.phoneHref} className="text-ink underline">
+            {site.phoneDisplay}
+          </a>
+      
         </p>
       </div>
     </section>

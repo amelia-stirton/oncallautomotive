@@ -9,7 +9,7 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="#top" className="rounded shrink-0">
+          <Link href="/" className="rounded shrink-0">
             <Image
               src="/logo.png"
               alt={`${site.businessName} logo`}
@@ -24,21 +24,21 @@ export default function Header() {
         {/* Navigation */}
         <nav className="hidden md:flex justify-center items-center gap-8 font-medium text-sm --text-ink/80">
           <a
-            href="#services"
+            href="/#services"
             className="hover:text-hazard transition-colors focus-ring rounded"
           >
             Services
           </a>
 
           <a
-            href="#quote"
+            href="/#quote"
             className="hover:text-hazard transition-colors focus-ring rounded"
           >
             Enquire
           </a>
 
           <a
-            href="#faq"
+            href="/#faq"
             className="hover:text-hazard transition-colors focus-ring rounded"
           >
             FAQ

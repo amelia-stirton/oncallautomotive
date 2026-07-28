@@ -31,7 +31,7 @@ export default function Footer() {
             href={`mailto:${site.email}`}
             className="block hover:text-hazard transition-colors focus-ring rounded"
           >
-            {site.email}
+            E: {site.email}
           </a>
           <a
             href={site.instagramUrl}

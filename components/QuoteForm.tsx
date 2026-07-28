@@ -91,7 +91,7 @@ export default function QuoteForm() {
           Enquire Now
         </h2>
         <p className="text-ink/70 mb-8">
-          Need a service, repair or inspection? Tell us a little about your vehicle and we'll get back to you shortly.
+          Need a service, repair or inspection? Tell us a little about your vehicle and we'll get back to you shortly. Alternatively, you can call us directly at <a href={site.phoneHref} className="underline">{site.phoneDisplay}</a>.
         </p>
 
         <form
