@@ -1,3 +1,6 @@
+"use client";
+
+
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/app/site-config";
@@ -9,7 +12,14 @@ export default function Header() {
 
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/" className="rounded shrink-0">
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="rounded shrink-0"
+          >
             <Image
               src="/logo.png"
               alt={`${site.businessName} logo`}
