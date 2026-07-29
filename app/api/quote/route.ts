@@ -66,6 +66,9 @@ export async function POST(request: Request) {
       recaptchaToken,
     } = body;
 
+    // Clean phone number for clickable tel: link
+const phoneHref = phone.replace(/[^\d+]/g, "");
+
     // reCAPTCHA check
     if (typeof recaptchaToken !== "string" || recaptchaToken.length === 0) {
       return Response.json(
@@ -134,10 +137,14 @@ export async function POST(request: Request) {
 
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
 
-        <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
-
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-
+<p>
+  <strong>Phone:</strong>
+  <a href="tel:${phoneHref}">${escapeHtml(phone)}</a>
+</p>
+        <p>
+  <strong>Email:</strong>
+  <a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>
+</p>
         <p><strong>Location:</strong> ${escapeHtml(location)}</p>
 
         <p><strong>Vehicle:</strong> ${escapeHtml(vehicle)}</p>
