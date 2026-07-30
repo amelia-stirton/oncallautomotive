@@ -6,6 +6,7 @@ import WhyUs from "../components/WhyUs";
 import QuoteForm from "../components/QuoteForm";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
+import Reviews from "../components/Reviews";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <WhyUs />
         <QuoteForm />
         <Faq />
+        <Reviews />
       </main>
       <Footer />
     </>
