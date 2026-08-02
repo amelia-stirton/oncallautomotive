@@ -1,4 +1,12 @@
+
 {
+  
+
+
+"overrides": {
+    "sharp": "0.35.3"
+  },
+  
   "name": "mobile-mechanic",
   "version": "0.1.0",
   "private": true,
@@ -24,4 +32,11 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   }
+
+
+
+
+
+
+  
 }
