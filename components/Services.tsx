@@ -83,13 +83,12 @@ export default function Services() {
           ))}
         </div>
 
-        <p className="mt-8 text-ink/60 text-sm">
-          Don&rsquo;t see your issue listed? Give Chris a call at{" "}
-          <a href={site.phoneHref} className="text-ink underline">
-            {site.phoneDisplay}
-          </a>
-      
-        </p>
+        <p className="mt-8 px-6 text-ink/60 text-sm">
+  Don&rsquo;t see your issue listed? <br /> Give Chris a call at{" "}
+  <a href={site.phoneHref} className="text-ink underline">
+    {site.phoneDisplay}
+  </a>
+</p>
       </div>
     </section>
   );
