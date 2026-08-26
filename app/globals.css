@@ -43,29 +43,6 @@ body {
   }
 }
 
-/* perforated divider, like a tear-off ticket stub */
-.perforation {
-  position: relative;
-  border-top: 2px dashed var(--color-ash);
-  opacity: 0.5;
-}
-.perforation::before,
-.perforation::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 9999px;
-  background: var(--color-paper);
-}
-.perforation::before {
-  left: -10px;
-}
-.perforation::after {
-  right: -10px;
-}
-
 .focus-ring {
   outline: none;
 }
@@ -75,7 +52,7 @@ body {
 }
 
 
-/* Taller phones (e.g. iPhone 14 Pro Max, 15 Pro Max, 16 Pro Max) */
+/* Taller phones (like iPhone 14 Pro Max etc.) */
 @media (max-width: 639px) and (min-height: 800px) {
   .hero-content {
     justify-content: center;
