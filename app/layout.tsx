@@ -4,6 +4,9 @@ import { Oswald, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "./site-config";
 
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+
 const oswald = Oswald({
   variable: "--font-oswald",
   subsets: ["latin"],
@@ -137,7 +140,15 @@ export default function RootLayout({
         <Script
           src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
           strategy="afterInteractive"
+
+
+
+
         />
+
+<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+
+
       </body>
     </html>
   );
