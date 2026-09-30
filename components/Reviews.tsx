@@ -1,13 +1,20 @@
 "use client";
 
+import Script from "next/script";
+
 export default function Reviews() {
   return (
-    <section className="w-full py-20">
-      <div className="mx-auto flex min-h-50 max-w-6xl items-center justify-center px-6">
-        <p className="text-center text-sm tracking-wide text-font-colour-dim">
-          Reviews coming soon.
-        </p>
-      </div>
-    </section>
+    <>
+      <div
+        id="featurable-0a33b791-ba8b-45f4-a156-bebfa23da922"
+        data-featurable-async
+      ></div>
+
+      <Script
+        src="https://cdn.featurable.com/widget/v2/embed.js"
+        strategy="lazyOnload"
+        charSet="UTF-8"
+      />
+    </>
   );
 }
