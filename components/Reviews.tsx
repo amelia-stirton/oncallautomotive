@@ -1,24 +1,13 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
-import { site } from "@/app/site-config";
-
-
-
-import Script from "next/script";
 
 export default function Reviews() {
   return (
-    <>
-      <div
-        id="featurable-0eb64dc8-13eb-4360-9821-86a3e803770f"
-        data-featurable-async
-      ></div>
-      <Script
-        src="https://cdn.featurable.com/widget/v2/embed.js"
-        strategy="lazyOnload"
-        charSet="UTF-8"
-      />
-    </>
+    <section className="w-full py-20">
+      <div className="mx-auto flex min-h-50 max-w-6xl items-center justify-center px-6">
+        <p className="text-center text-sm tracking-wide text-font-colour-dim">
+          Reviews coming soon.
+        </p>
+      </div>
+    </section>
   );
 }

@@ -1,5 +1,4 @@
 // Central place for the client to edit their business details.
-// Update these values and they'll flow through the whole site.
 
 export const site = {
   businessName: "On Call Automotive",
